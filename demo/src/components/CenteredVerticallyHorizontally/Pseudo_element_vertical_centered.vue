@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div class="box"></div>
+    <div class="box">伪元素垂直水平居中</div>
   </div>
 </template>
 
@@ -25,5 +25,6 @@
   background: green;
   vertical-align: middle;
   align-content: center;
+  font-size: 2rem;
 }
 </style>

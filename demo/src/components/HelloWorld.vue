@@ -3,8 +3,8 @@
     <h1>{{ msg }}</h1>
     <h2>
       <router-link to="Thos_praticeList">
-          Thos_praticeList
-        </router-link>
+      Thos_praticeList
+      </router-link>
     </h2>
   </div>
 </template>
