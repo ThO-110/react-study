@@ -1,6 +1,13 @@
 <template>
+  <div>
+    <!-- <elUITest/> -->
   <div class="pratice_list">
     <ul>
+      <li>
+        <router-link to="pratice">
+          pratice
+        </router-link>
+      </li>
       <li>
         <router-link to="pratice1">
           伪元素垂直水平居中
@@ -18,18 +25,40 @@
       </li>
     </ul>
   </div>
+  </div>
 </template>
 
+<script>
+import elUITest from './elUITest.vue'
+
+export default {
+  components: {
+    elUITest
+  }
+}
+</script>
+
+
 <style lang="less">
+a {
+  text-decoration: none;
+}
 .pratice_list {
   align-content: center;
-  background: rgb(20, 133, 133);
+  background: rgba(198, 226, 252, 0.555);
+  padding: 20px 20px;
 }
-
+ul {
+    padding-left: 0;
+}
 li {
+  font-family: 'KirangHaerang-Regular';
   font-size: 1.5rem;
   list-style: none;
   padding: 4px 0;
+}
+a {
+  color: #2d588f;
 }
 </style>
 
