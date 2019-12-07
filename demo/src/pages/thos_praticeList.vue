@@ -23,6 +23,16 @@
           flex垂直水平居中
         </router-link>
       </li>
+      <li>
+        <router-link to="SvgPratice">
+          svg绘画
+        </router-link>
+      </li>
+      <li>
+        <router-link to="StarrySky">
+          cavas星空
+        </router-link>
+      </li>
     </ul>
   </div>
   </div>
