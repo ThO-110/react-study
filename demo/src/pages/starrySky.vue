@@ -1,12 +1,13 @@
-<template lang="pug">
-  .wrap
-    img(src="@/assets/images/logo.png")
+<template>
+  <div class="wrap">
+    <svg class="icon" aria-hidden="true">
+      <use xlink:href="#icon-facebook"></use>
+    </svg>
+  </div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style lang="less" scoped>
@@ -14,11 +15,12 @@ export default {
   height: 100%;
   width: 100%;
   align-items: center;
-  img {
+  .icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 120px;
   }
 }
 </style>

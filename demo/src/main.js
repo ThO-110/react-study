@@ -6,6 +6,8 @@ import router from "./router";
 import "./assets/font.css"; //自制字体库
 import ElementUI from "element-ui"; //element-ui的全部组件
 import "element-ui/lib/theme-chalk/index.css"; //element-ui的css
+import "./assets/iconfont/iconfont.js";
+import "./assets/iconfont/icon.css";
 
 Vue.use(ElementUI); //使用elementUI
 Vue.prototype.$store = store;

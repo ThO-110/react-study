@@ -1,51 +1,42 @@
 <template>
   <div>
     <!-- <elUITest/> -->
-  <div class="pratice_list">
-    <ul>
-      <li>
-        <router-link to="pratice">
-          pratice
-        </router-link>
-      </li>
-      <li>
-        <router-link to="pratice1">
-          伪元素垂直水平居中
-        </router-link>
-      </li>
-      <li>
-        <router-link to="pratice2">
-          transform垂直居中
-        </router-link>
-      </li>
-      <li>
-        <router-link to="pratice3">
-          flex垂直水平居中
-        </router-link>
-      </li>
-      <li>
-        <router-link to="SvgPratice">
-          svg绘画
-        </router-link>
-      </li>
-      <li>
-        <router-link to="StarrySky">
-          cavas星空
-        </router-link>
-      </li>
-    </ul>
-  </div>
+    <div class="pratice_list">
+      <ul>
+        <li>
+          <router-link to="pratice">pratice</router-link>
+        </li>
+        <li>
+          <router-link to="pratice1">伪元素垂直水平居中</router-link>
+        </li>
+        <li>
+          <router-link to="pratice2">transform垂直居中</router-link>
+        </li>
+        <li>
+          <router-link to="pratice3">flex垂直水平居中</router-link>
+        </li>
+        <li>
+          <router-link to="SvgPratice">svg绘画</router-link>
+        </li>
+        <li>
+          <router-link to="StarrySky">cavas星空</router-link>
+        </li>
+        <li>
+          <router-link to="Five">五子棋</router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import elUITest from './elUITest.vue'
+import elUITest from "./elUITest.vue";
 
 export default {
   components: {
     elUITest
   }
-}
+};
 </script>
 
 
@@ -59,10 +50,10 @@ a {
   padding: 20px 20px;
 }
 ul {
-    padding-left: 0;
+  padding-left: 0;
 }
 li {
-  font-family: 'KirangHaerang-Regular';
+  font-family: "KirangHaerang-Regular";
   font-size: 1.5rem;
   list-style: none;
   padding: 4px 0;
