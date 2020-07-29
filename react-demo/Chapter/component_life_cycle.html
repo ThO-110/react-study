@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="../cdn/react.development.js"></script>
+    <script src="../cdn/react-dom.development.js"></script>
+    <script src="../cdn/prop-types.js"></script>
+    <script src="../cdn/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+      class Life extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            opacity: 1,
+          };
+
+          this.distory = this.distory.bind(this);
+        }
+
+        distory() {
+          ReactDOM.unmountComponentAtNode(document.getElementById("container"));
+        }
+
+        componentDidMount() {
+          let { opacity } = this.state;
+          this.intervalId = setInterval(() => {
+            console.log("opacity()");
+            opacity -= 0.1;
+            if (opacity <= 0) {
+              opacity = 1;
+            }
+            this.setState({ opacity });
+          }, 200);
+        }
+
+        componentWillUnmount() {
+          clearInterval(this.intervalId);
+        }
+
+        render() {
+          const { opacity } = this.state;
+          return (
+            <div>
+              <h2 style={{ opacity: opacity }}>
+                This chapter teaches React Lifecycle!
+              </h2>
+              <button onClick={this.distory}>distory</button>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<Life />, document.getElementById("container"));
+    </script>
+  </body>
+</html>

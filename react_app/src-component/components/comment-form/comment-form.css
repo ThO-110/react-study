@@ -1,0 +1,15 @@
+.form-container {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+.btn-box {
+  position: relative;
+}
+
+.btn-submit {
+  position: absolute;
+  right: 0;
+}

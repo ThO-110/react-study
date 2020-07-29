@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Demo</title>
+    <script src="../cdn/react.development.js"></script>
+    <script src="../cdn/react-dom.development.js"></script>
+    <script src="../cdn/prop-types.js"></script>
+    <script src="../cdn/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+      class Form extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.handleSubmit = this.handleSubmit.bind(this);
+          this.handleChange = this.handleChange.bind(this);
+
+          this.state = {
+            pwd: "",
+          };
+        }
+
+        handleSubmit(event) {
+          const name = this.nameinput.value;
+          const { pwd } = this.state;
+          alert(`账户：${name} 密码：${pwd}`);
+          event.preventDefault();
+        }
+
+        handleChange(event) {
+          const pwd = event.target.vaule;
+          this.setState({ pwd });
+        }
+
+        render() {
+          return (
+            <form onSubmit={this.handleSubmit}>
+              账户：
+              <input type="text" ref={(input) => (this.nameinput = input)} />
+              密码：
+              <input
+                type="password"
+                value={this.state.pwd}
+                onChange={this.handleChange}
+              />
+              <input type="submit" value="提交" />
+            </form>
+          );
+        }
+      }
+
+      ReactDOM.render(<Form />, document.getElementById("container"));
+    </script>
+  </body>
+</html>

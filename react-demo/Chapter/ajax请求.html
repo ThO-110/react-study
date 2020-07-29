@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="../cdn/react.development.js"></script>
+    <script src="../cdn/react-dom.development.js"></script>
+    <script src="../cdn/prop-types.js"></script>
+    <script src="../cdn/babel.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.20.0-0/axios.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        state = {
+          reqName: "",
+          reqUrl: "",
+        };
+
+        componentDidMount() {
+          const url = `https://api.github.com/search/repositories?q=re&sort=stars`;
+          const userAgent =
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36";
+          const Accept =
+            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
+          // axios
+          axios
+            .get(url)
+            .then((res) => {
+              if (res.status === 200 && res.data) {
+                const { data } = res;
+                if (data.items.length) {
+                  this.setState({
+                    reqName: data.items[0].name,
+                    reqUrl: data.items[0].html_url,
+                  });
+                }
+              }
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+          // fetch
+          /* fetch(url)
+            .then((res) => {
+              return res.json();
+            })
+            .then((r) => {
+              const { name, html_url } = r.items[0];
+              this.setState({
+                reqName: name,
+                reqUrl: html_url,
+              });
+            }); */
+        }
+
+        render() {
+          const { reqName, reqUrl } = this.state;
+          return reqName ? (
+            <h2>
+              Has Most Star Repo is <a href={reqUrl}>{reqName}</a>!
+            </h2>
+          ) : (
+            <h2>Loading...</h2>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("container"));
+    </script>
+  </body>
+</html>

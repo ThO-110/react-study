@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <svg class="icon" aria-hidden="true">
-      <use xlink:href="#icon-facebook"></use>
+      <use xlink:href="#iconfanchuan"></use>
     </svg>
   </div>
 </template>

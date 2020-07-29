@@ -1,0 +1,38 @@
+{
+  "react-template": {
+    "prefix": "h:react",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang='en'>",
+      "<head>",
+      "\t<meta charset=\"UTF-8\">",
+      "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "\t<title></title>",
+      "\t<script src=\"../cdn/react.development.js\"></script>",
+      "\t<script src=\"../cdn/react-dom.development.js\"></script>",
+      "\t<script src=\"../cdn/prop-types.js\"></script>",
+      "\t<script src=\"../cdn/babel.min.js\"></script>",
+      "</head>",
+      "<body>",
+      "\t<div id=\"container\"></div>",
+      "",
+      "\t<script type=\"text/babel\">",
+      "\t\tclass App extends React.Component {",
+      "\t\t\trender() {",
+      "\t\t\t\treturn (",
+      "\t\t\t\t\t<div>",
+      "\t\t\t\t\t\t",
+      "\t\t\t\t\t</div>",
+      "\t\t\t\t)",
+      "\t\t\t}",
+      "\t\t}",
+      "\t\t",
+      "\t\tReactDOM.render(<App />, document.getElementById(\"container\"));",
+      "\t</script>",
+
+      "</body>",
+      "</html>"
+    ],
+    "description": "HTML5:React"
+  }
+}

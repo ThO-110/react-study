@@ -1,0 +1,29 @@
+.head {
+  font-size: 30px;
+}
+.inp {
+  font-size: large;
+  width: 300px;
+  margin-right: 5px;
+}
+.btn {
+  font-size: large;
+}
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+.img {
+  width: 280px;
+  height: 280px;
+  margin: 10px 10px;
+  border: 1px solid black;
+}
+.user-name {
+  text-align: center;
+}
+.tips {
+  margin-left: 40px;
+  margin-top: 40px;
+}

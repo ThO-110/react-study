@@ -1,0 +1,10 @@
+.home-container #home-nav {
+  margin-top: 10px;
+  display: flex;
+}
+.home-container #home-nav li {
+  padding: 0 10px;
+}
+.home-container .content {
+  padding: 30px 10px;
+}
