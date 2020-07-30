@@ -21,7 +21,6 @@ export default class message extends Component {
       });
     }, 1000);
   }
-  // aaa
 
   componentWillUnmount() {
     clearTimeout(this.sendData);
