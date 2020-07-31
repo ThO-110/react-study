@@ -1,13 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom";
+// import Comment from "./pages/comment/comment";
+// import Search from "./pages/search/search";
+import ImgLazyLoad from "./pages/imgLazyLoad/imgLazyLoad";
 
-import App from "../src/components/app/app";
-import "./reset.css";
-
-render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+ReactDOM.render(<ImgLazyLoad />, document.getElementById("root"));
