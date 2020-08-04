@@ -1,7 +1,13 @@
 .head {
   padding: 10px 50px;
   font-size: 50px;
-  background-color: rgb(212, 212, 212);
+  /* background-color: rgb(114, 197, 245); */
+  background-image: linear-gradient(
+    to right,
+    rgb(13, 94, 141),
+    rgb(74, 20, 105)
+  );
+  color: rgb(236, 242, 252);
 }
 
 .body {
