@@ -6,6 +6,7 @@ import CommentItem from "../comment-item/comment-item";
 export default class commentList extends Component {
   static propTypes = {
     comments: PropTypes.array.isRequired,
+    deleteComment: PropTypes.func.isRequired,
   };
 
   state = {
@@ -26,12 +27,16 @@ export default class commentList extends Component {
 
   render() {
     const { hasComments } = this.state;
-    const { comments } = this.props;
+    const { comments, deleteComment } = this.props;
     const list = (
       <ul>
         {comments.map((item, index) => (
           <li key={index}>
-            <CommentItem item={item} index={index} />
+            <CommentItem
+              item={item}
+              index={index}
+              deleteComment={deleteComment}
+            />
           </li>
         ))}
       </ul>

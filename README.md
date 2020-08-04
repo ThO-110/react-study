@@ -1,6 +1,11 @@
-<<<<<<< HEAD
-# study
+# react-demo
 
-=======
-# react-study
->>>>>>> cdc672743db2848c002222658b2d54a208cb8923
+## 纯 htmlreact 页面
+
+# react_app
+
+## react 初级项目
+
+# react-ui
+
+## 引入了 antd-mobile 和 redux
